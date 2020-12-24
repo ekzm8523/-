@@ -14,12 +14,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        new JWMemo();
-        try {
-            new phoneCallProgram();
-        }catch (Exception e){
-            System.out.println("IOException 발생!");
-        }
 
     }
 }
