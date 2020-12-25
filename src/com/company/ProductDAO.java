@@ -108,7 +108,7 @@ public class ProductDAO {
     }
     public boolean updateProduct(Product product){
         connectDB();
-        sql = "update product set prname = ?, price ?, manufacture = ? where prcode = ?";
+        sql = "update product set prname = ?, price = ?, manufacture = ? where prcode = ?";
 
         try{
             pstmt = conn.prepareStatement(sql);
@@ -131,13 +131,13 @@ public class ProductDAO {
 
     }
 
-    public boolean deleteProduct(Product product){
+    public boolean deleteProduct(int prCode){
         connectDB();
         sql = "delete from product where prcode = ?";
 
         try{
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1,product.getPrCode());
+            pstmt.setInt(1,prCode);
             result = pstmt.executeUpdate();
 
         }catch(Exception e){

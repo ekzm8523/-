@@ -13,7 +13,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 public class Main {
 
     public static void main(String[] args) {
-
+        AppMain program = new AppMain();
+        program.startUI();
 
     }
 }
