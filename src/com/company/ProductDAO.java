@@ -35,7 +35,6 @@ public class ProductDAO {
         items = new Vector<String>(); // 콤보박스 초기화
         items.add("전체");
 
-
         try {
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
@@ -62,7 +61,7 @@ public class ProductDAO {
 
     }
 
-    public Product getProduct(int prcode){
+    public Product getProduct(int prCode){
 
         connectDB();
         sql = "select * from product where prcode = ?";
@@ -70,7 +69,7 @@ public class ProductDAO {
 
         try{
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1,prcode);
+            pstmt.setInt(1,prCode);
             rs = pstmt.executeQuery();
             rs.next();
             p = new Product();

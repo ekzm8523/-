@@ -33,6 +33,7 @@ public class AppMain extends JFrame{
 
     public AppMain(){
         dataList = new ArrayList<Product>();
+
         p1 = new JPanel();
         p1.setPreferredSize(new Dimension(90,300));
         p2 = new JPanel();
@@ -67,7 +68,7 @@ public class AppMain extends JFrame{
         lblManufacture = new JLabel("제조사");
         lblManufacture.setFont(new Font("Serif", Font.BOLD, 14));
 
-        comboBox = new JComboBox<String>(); // *******
+        comboBox = new JComboBox<String>();
         scroll = new JScrollPane();
 
         dao = new ProductDAO();
@@ -120,10 +121,7 @@ public class AppMain extends JFrame{
 
     }
 
-    //actionPerformed() // 메서드에서 이벤트 처리
-    public void actionPerformed(){
 
-    }
     //refreshData() // 메서드에서 화면 데이터 로딩 및 재로딩 처리
     public void refreshData(){
         txtArea.setText("");
@@ -212,7 +210,6 @@ public class AppMain extends JFrame{
                 }
                 refreshData();
             }
-            //else if(obj == )
         }
     }
 
